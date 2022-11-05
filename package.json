@@ -8,7 +8,7 @@
     "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "test": "jest --config jestconfig.json --verbose"
   },
-  "author": "alvgaona@gmail.com",
+  "author": "@discordcf",
   "license": "MIT",
   "eslintConfig": {
     "root": true,
@@ -33,7 +33,7 @@
     "webpack-cli": "^4.7.0"
   },
   "dependencies": {
-    "discordcf": "^0.0.1",
+    "@discordcf/core": "^0.1.0",
     "discord-api-types": "^0.37.2",
   }
 }

@@ -1,5 +1,5 @@
 import { command } from './cmd/cmd';
-import { createApplicationCommandHandler, Permissions } from 'cloudflare-discord-bot';
+import { createApplicationCommandHandler, Permissions } from '@discordcf/core';
 
 let applicationCommandHandler: (request: Request) => any;
 

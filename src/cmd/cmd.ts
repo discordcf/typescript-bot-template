@@ -1,4 +1,4 @@
-import { Command, CommandInteractionHandler, InteractionDataType } from 'cloudflare-discord-bot';
+import { Command, CommandInteractionHandler, InteractionDataType } from '@discordcf/core';
 import { APIInteractionResponse, InteractionResponseType } from 'discord-api-types/v10';
 
 // Your command can use any InteractionType
@@ -18,7 +18,7 @@ export const command: Command<InteractionDataType.APIChatInputApplicationCommand
       type: InteractionResponseType.ChannelMessageWithSource, // The command supports any of the InteractionResponseType
       data: {
         content: `A commmand`,
-      },
+      },:
     };
   }
 ];

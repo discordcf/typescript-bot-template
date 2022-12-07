@@ -1,13 +1,11 @@
-import { Command, CommandInteractionHandler, InteractionDataType } from '@discordcf/core';
-import { APIInteractionResponse, InteractionResponseType } from 'discord-api-types/v10';
+import { Command, APIInteractionResponse, InteractionResponseType, Context } from '@discordcf/framework';
 
-// Your command can use any InteractionType
-export const command: Command<InteractionDataType.APIChatInputApplicationCommandInteractionData> = [
-  {
+export const command: Command = {
+  command: {
     name: "cmd",
     description: "A command.",
   }, // There are more options for this object: https://discord-api-types.dev/api/discord-api-types-v9/interface/APIApplicationCommand
-  async (interaction, env, context): Promise<APIInteractionResponse> => {
+  handler: async (ctx: Context): Promise<APIInteractionResponse> => {
     /* This arrow function works as a command handler.
     * Everytime the command is called, this function is executed.
     *
@@ -18,9 +16,9 @@ export const command: Command<InteractionDataType.APIChatInputApplicationCommand
       type: InteractionResponseType.ChannelMessageWithSource, // The command supports any of the InteractionResponseType
       data: {
         content: `A commmand`,
-      },:
+      },
     };
-  }
-];
+  },
+};
 
 export default command;

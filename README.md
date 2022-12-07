@@ -1,3 +1,3 @@
-# Starter Bot Template
+# typescript-bot-template
 
-The template you need to start building your bot with [discord.cf](https://github.com/discordcf/discordcf).
+Get started with your Discord bots using TypeScript.

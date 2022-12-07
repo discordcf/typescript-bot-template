@@ -1,5 +1,6 @@
 import { command } from './cmd/cmd';
-import { createApplicationCommandHandler, Permissions } from '@discordcf/core';
+import { createApplicationCommandHandler, Permissions } from '@discordcf/framework';
+import clickMePrimaryComponent from './components/click-me-primary';
 
 let applicationCommandHandler: (request: Request) => any;
 
@@ -26,11 +27,10 @@ export default {
     if (!applicationCommandHandler) {
       applicationCommandHandler = createApplicationCommandHandler({
         applicationId: env.APPLICATION_ID,
-        applicationSecret: env.CLIENT_SECRET,
         publicKey: env.PUBLIC_KEY,
         botToken: env.BOT_TOKEN,
         commands: [command], // Import and register your commands here.
-        components: {}, // Import and register your message components here.
+        components: [clickMePrimaryComponent], // Import and register your message components here.
         guildId: env.GUILD_ID,  // Look at the GUILD_ID comment above.
         permissions: new Permissions(
           [ 

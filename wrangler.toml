@@ -1,5 +1,5 @@
 compatibility_date = "2022-10-20"
-account_id = "590d5e6a4382a813b506fa45ca1609e0"
+account_id = "your cloudflare account id"
 main = "src/index.ts"
 node_compat = true
 
@@ -7,10 +7,9 @@ node_compat = true
 command = "npm install && npm run build"
 
 [env.test]
-name = "noisy-meadow-372a"
+name = "some name"
 workers_dev = true
 
 [env.test.vars]
-APPLICATION_ID = "1033539429266108466"
-PUBLIC_KEY = "4cf53b847ba8a8feb2fbad11a779055a5a67c7ced7fe93a543a8e23aaee0da14"
-GUILD_ID = "1007829093556953169"
+APPLICATION_ID = "insert your discord application id"
+PUBLIC_KEY = "insert your discord application public key"

@@ -18,7 +18,7 @@
     ]
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^2.2.2",
+    "@cloudflare/workers-types": "^3.14.1",
     "@types/lodash": "^4.14.172",
     "@types/node": "^16.7.10",
     "@typescript-eslint/eslint-plugin": "^4.16.1",
@@ -33,7 +33,7 @@
     "webpack-cli": "^4.7.0"
   },
   "dependencies": {
-    "@discordcf/core": "^0.1.0",
+    "@discordcf/framework": "^0.1.0",
     "discord-api-types": "^0.37.2",
   }
 }

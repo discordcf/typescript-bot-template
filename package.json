@@ -33,7 +33,6 @@
     "webpack-cli": "^4.7.0"
   },
   "dependencies": {
-    "@discordcf/framework": "^0.1.0",
-    "discord-api-types": "^0.37.2",
+    "@discordcf/framework": "^0.1.0"
   }
 }

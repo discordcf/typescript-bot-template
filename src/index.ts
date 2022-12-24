@@ -23,7 +23,7 @@ export interface Env {
 }
 
 export default {
-  fetch: async (request: Request, env: Env, context: any): Promise<Response> => {
+  fetch: async (request: Request, env: Env, context: ExecutionContext): Promise<Response> => {
     if (!applicationCommandHandler) {
       applicationCommandHandler = createApplicationCommandHandler({
         applicationId: env.APPLICATION_ID,
@@ -37,7 +37,9 @@ export default {
             'SendMessages', // Add your bot permissions here as a list of string.
           ]
         )
-      });
+      },
+      env,
+      context);
     }
     return applicationCommandHandler(request);
   },
